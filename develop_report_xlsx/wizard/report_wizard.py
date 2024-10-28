@@ -24,8 +24,6 @@ class ReportWizard(models.TransientModel):
                 FROM res_partner
             )
             
-            
-            
         
             SELECT 
                 partner.name                    AS name,
