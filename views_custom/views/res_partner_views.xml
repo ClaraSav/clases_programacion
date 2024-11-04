@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="partner_view_custom" model="ir.ui.view">
+        <field name="name">partner.view.custom</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="priority" eval="11"/>
+        <field name="arch" type="xml">
+            <page name="internal_notes" position="after">
+                <page name="curriculum" string="Curriculum">
+                    <div class="row">
+                        <div class="col-6 p-2">
+                            <button name="action_view_sale_order" type="object" class="btn btn-link">Link</button>
+                        </div>
+                        <div class="col-6 text-end">
+                            <img src="/views_custom/static/img/profile.png" width="200" height="200" alt=""/>
+                        </div>
+                    </div>
+
+                    <div class="custom_table">
+                        <table class="table table-striped" style="border: 2px solid #000 !important">
+                            <tr class="header_custom">
+                                <th>Primer Nombre</th>
+                                <th><label for="second_name"/></th>
+                                <th><label for="last_name"/></th>
+                            </tr>
+                            <tr>
+                                <td><field name="first_name"/></td>
+                                <td><field name="second_name"/></td>
+                                <td><field name="last_name"/></td>
+                            </tr>
+                            <tr class="header_custom">
+                                <th><label for="phone"/><i class="fa fa-phone"/></th>
+                                <th><label for="mobile"/><i class="fa fa-mobile"/></th>
+                                <th><label for="email"/><i class="fa fa-envelope-o"/></th>
+                            </tr>
+                            <tr>
+                                <td><field name="phone"/></td>
+                                <td><field name="mobile"/></td>
+                                <td><field name="email"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                </page>
+            </page>
+        </field>
+    </record>
+
+
+</odoo>
